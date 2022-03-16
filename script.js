@@ -48,11 +48,11 @@ async function getLocation(updateSource) {
     headers.append('Authorization', token);
 
     const url = "https://1vslxwttna.execute-api.eu-west-1.amazonaws.com/test/coordinates";
-    const proxy = "https://corsanywhere.herokuapp.com/";
+    // const proxy = "https://corsanywhere.herokuapp.com/";
 
     const response = await fetch(
-      proxy + url,
-      // url,
+      // proxy + url,
+      url,
       { 
         mode: 'cors',
         method: 'GET',
