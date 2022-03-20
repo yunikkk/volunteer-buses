@@ -40,7 +40,7 @@ function getToken() {
 
   console.log('started getToken');
   let token = localStorage.getItem('apiToken');
-  console.log('saved token: ', savedToken);
+  console.log('saved token: ', token);
   
   if(!token) {
     console.log('before readToken');
