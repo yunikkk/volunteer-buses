@@ -42,7 +42,7 @@ function getToken() {
   let token = localStorage.getItem('apiToken');
   console.log('saved token: ', JSON.stringify(token));
   
-  if(token == null || token == undefined || token == '') {
+  if(token == null || token == undefined || token == '' || token == 'null') {
     console.log('before readToken');
     token = readToken();
     console.log('after readToken: ', JSON.stringify(token));
