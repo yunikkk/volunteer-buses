@@ -57,7 +57,7 @@ async function getLocation(updateSource) {
   try {
     let headers = new Headers();
 
-    const token = readToken();
+    const token = getToken();
     console.log("Token : " + token);
 
     headers.append('Content-Type', 'application/json');
