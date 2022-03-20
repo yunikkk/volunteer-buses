@@ -77,7 +77,7 @@ async function getLocation(updateSource) {
       }
     );
     const buses = await response.json();
-    console.log("buses : " + buses);
+    console.log("buses : ", JSON.stringify(buses));
 // response format :
 // [
 //   {
