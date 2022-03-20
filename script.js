@@ -77,6 +77,9 @@ async function getLocation(updateSource) {
       }
     );
     const buses = await response.json();
+    if(buses.message === 'Unauthorized') {
+      window.location.href = '/login';
+    }
     console.log("buses : ", JSON.stringify(buses));
 // response format :
 // [
