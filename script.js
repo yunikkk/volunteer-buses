@@ -40,16 +40,16 @@ function getToken() {
 
   console.log('started getToken');
   let token = localStorage.getItem('apiToken');
-  console.log('saved token: ', token);
+  console.log('saved token: ', JSON.stringify(token));
   
   if(token == null || token == undefined || token == '') {
     console.log('before readToken');
     token = readToken();
-    console.log('after readToken: ', token);
+    console.log('after readToken: ', JSON.stringify(token));
     localStorage.setItem('apiToken', token);
   }
   
-  console.log('token must be valid now: ', token);
+  console.log('token must be valid now: ', JSON.stringify(token));
   
   return token;
 }
