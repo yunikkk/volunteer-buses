@@ -47,7 +47,7 @@ function getToken() {
     token = readToken();
     console.log('after readToken: ', token);
     localStorage.setItem('apiToken', token);
-    //window.location.href = '/login';
+    //window.location.href = '/volunteer-buses/login';
   }
   
   return token;
