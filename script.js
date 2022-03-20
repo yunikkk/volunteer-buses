@@ -36,6 +36,23 @@ function readToken() {
   return idToken;
 }
 
+function getToken() {
+
+  console.log('started getToken');
+  let token = localStorage.getItem('apiToken');
+  console.log('saved token: ', savedToken);
+  
+  if(!token) {
+    console.log('before readToken');
+    token = readToken();
+    console.log('after readToken: ', token);
+    localStorage.setItem('apiToken', token);
+    //window.location.href = '/login';
+  }
+  
+  return token;
+}
+
 async function getLocation(updateSource) {
   try {
     let headers = new Headers();
