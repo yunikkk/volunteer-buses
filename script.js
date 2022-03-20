@@ -47,7 +47,6 @@ function getToken() {
     token = readToken();
     console.log('after readToken: ', token);
     localStorage.setItem('apiToken', token);
-    //window.location.href = '/volunteer-buses/login';
   }
   
   return token;
@@ -78,7 +77,7 @@ async function getLocation(updateSource) {
     );
     const buses = await response.json();
     if(buses.message === 'Unauthorized') {
-      window.location.href = '/login';
+      window.location.href = '/volunteer-buses/login';
     }
     console.log("buses : ", JSON.stringify(buses));
 // response format :
