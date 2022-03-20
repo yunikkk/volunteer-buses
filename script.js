@@ -42,12 +42,14 @@ function getToken() {
   let token = localStorage.getItem('apiToken');
   console.log('saved token: ', token);
   
-  if(!token) {
+  if(token == null || token == undefined || token == '') {
     console.log('before readToken');
     token = readToken();
     console.log('after readToken: ', token);
     localStorage.setItem('apiToken', token);
   }
+  
+  console.log('token must be valid now: ', token);
   
   return token;
 }
