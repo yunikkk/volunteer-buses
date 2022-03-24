@@ -78,7 +78,7 @@ async function getLocation(updateSource) {
       }
     );
     const buses = await response.json();
-    if(buses.message === 'Unauthorized') {
+    if(buses.message === 'Unauthorized' || buses.message === 'The incoming token has expired') {
       window.location.href = '/volunteer-buses/login';
     }
     console.log("buses : ", JSON.stringify(buses));
